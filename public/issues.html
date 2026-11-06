@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue and Return Books</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Issue and Return Books</h1>
+            <button class="logout-button" onclick="logout()">Logout</button>
+        </header>
+
+        <main class="dashboard-content">
+            <button onclick="location.href='dashboard.html'">
+                Back to Dashboard
+            </button>
+
+            <section class="book-form">
+                <h2>Issue a Book</h2>
+
+                <form id="issueForm">
+                    <label for="bookId">Select Book</label>
+                    <select id="bookId" required>
+                        <option value="">Loading books...</option>
+                    </select>
+
+                    <label for="studentId">Select Student</label>
+                    <select id="studentId" required>
+                        <option value="">Loading students...</option>
+                    </select>
+
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" id="dueDate" required>
+
+                    <button type="submit">Issue Book</button>
+                    <button type="reset">Clear</button>
+                </form>
+
+                <p id="issueMessage"></p>
+            </section>
+
+            <section class="book-list">
+                <h2>Issue History</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Book</th>
+                            <th>Student</th>
+                            <th>Issue Date</th>
+                            <th>Due Date</th>
+                            <th>Return Date</th>
+                            <th>Fine</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="issuesTableBody">
+                        <tr>
+                            <td colspan="9">Loading issue records...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/issues.js"></script>
+</body>
+</html>

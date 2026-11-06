@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div>
+                <h1>📚 Library Management System</h1>
+                <p>Admin Dashboard</p>
+            </div>
+
+            <button id="logoutButton" class="logout-button">
+                Logout
+            </button>
+        </header>
+
+        <main class="dashboard-content">
+            <h2>Dashboard Overview</h2>
+<div class="dashboard-actions">
+    <button onclick="location.href='books.html'">Manage Books</button>
+
+    <button onclick="location.href='students.html'">Manage Students</button>
+
+    <button onclick="location.href='issues.html'">
+        Issue / Return Books
+    </button>
+</div>
+            <p class="welcome-text" id="welcomeMessage">
+                Loading dashboard...
+            </p>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <h3>Total Book Titles</h3>
+                    <p id="totalTitles">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Total Book Copies</h3>
+                    <p id="totalBooks">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Available Copies</h3>
+                    <p id="availableBooks">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Total Students</h3>
+                    <p id="totalStudents">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Currently Issued</h3>
+                    <p id="issuedBooks">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Returned Books</h3>
+                    <p id="returnedBooks">0</p>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

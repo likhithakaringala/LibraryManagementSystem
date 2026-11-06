@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div>
+                <h1>📚 Library Management System</h1>
+                <p>Book Management</p>
+            </div>
+            <button class="logout-button" onclick="logout()">Logout</button>
+        </header>
+
+        <main class="dashboard-content">
+            <button onclick="location.href='dashboard.html'">Back to Dashboard</button>
+
+            <h2>Manage Books</h2>
+
+            <div class="book-form">
+                <h3 id="formTitle">Add New Book</h3>
+
+                <form id="bookForm">
+                    <input type="hidden" id="bookId">
+
+                    <div class="form-group">
+                        <label for="title">Book Title</label>
+                        <input type="text" id="title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <input type="text" id="category">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="isbn">ISBN</label>
+                        <input type="text" id="isbn">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" min="0" required>
+                    </div>
+
+                    <button type="submit" id="saveBookButton">Add Book</button>
+                    <button type="button" onclick="resetForm()">Clear</button>
+                </form>
+
+                <p id="bookMessage"></p>
+            </div>
+
+            <div class="book-list">
+                <h3>Book List</h3>
+
+                <input
+                    type="text"
+                    id="searchBook"
+                    placeholder="Search by title, author, category or ISBN"
+                >
+
+                <div style="overflow-x:auto">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Category</th>
+                                <th>ISBN</th>
+                                <th>Quantity</th>
+                                <th>Available</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="booksTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/books.js"></script>
+</body>
+</html>
